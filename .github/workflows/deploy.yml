@@ -25,12 +25,12 @@ jobs:
           node-version: 20
           cache: npm
 
-      # No package-lock.json in your repo, so npm ci fails.
-      - run: npm install
+      # Install deps while ignoring peer-dependency conflicts
+      # (common CI failure when no lockfile + newer Vite/React versions)
+      - run: npm install --legacy-peer-deps
       - run: npm run build
 
       - uses: actions/configure-pages@v5
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
