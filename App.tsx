@@ -92,7 +92,7 @@ const App: React.FC = () => {
     }
   };
 
-  // Embedded SVG Logo - Updated to match the requested image with Network Icon and Red 'E'
+  // Embedded SVG Logo - Updated with Red/Orange (#EF4444) dots and E-bars
   const logoUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 100' fill='none'%3E%3C!-- Icon --%3E%3Cpath d='M40 20 L20 70 H60 Z' stroke='white' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M40 20 L40 50 M20 70 L40 50 M60 70 L40 50' stroke='white' stroke-width='3'/%3E%3Ccircle cx='40' cy='20' r='5' fill='%23EF4444'/%3E%3Ccircle cx='20' cy='70' r='5' fill='%23EF4444'/%3E%3Ccircle cx='60' cy='70' r='5' fill='%23EF4444'/%3E%3Ccircle cx='40' cy='50' r='5' fill='%23EF4444'/%3E%3C!-- Text AV --%3E%3Ctext x='80' y='70' font-family='sans-serif' font-weight='bold' font-size='48' fill='white'%3EAV%3C/text%3E%3C!-- Red E --%3E%3Crect x='150' y='36' width='28' height='6' fill='%23EF4444'/%3E%3Crect x='150' y='50' width='28' height='6' fill='%23EF4444'/%3E%3Crect x='150' y='64' width='28' height='6' fill='%23EF4444'/%3E%3C!-- Text NTUS --%3E%3Ctext x='185' y='70' font-family='sans-serif' font-weight='bold' font-size='48' fill='white'%3ENTUS%3C/text%3E%3C!-- Subtext --%3E%3Ctext x='82' y='94' font-family='sans-serif' font-size='12' fill='white' letter-spacing='4'%3EDIGITAL MEDIA%3C/text%3E%3C/svg%3E";
 
   // Data
@@ -151,15 +151,15 @@ const App: React.FC = () => {
       ></div>
       <div className="fixed inset-0 z-0 bg-slate-950/80 pointer-events-none"></div>
 
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button - Styled with White Border and White Text */}
       <a 
         href="https://wa.me/1234567890" // Replace with actual number
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition-transform cursor-pointer flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-50 bg-slate-950 border-2 border-white p-4 rounded-full shadow-lg hover:bg-white hover:text-slate-950 hover:scale-110 transition-all cursor-pointer flex items-center justify-center group"
         aria-label="Chat on WhatsApp"
       >
-        <WhatsAppIcon className="w-8 h-8 text-gold-500" />
+        <WhatsAppIcon className="w-8 h-8 text-white group-hover:text-slate-950 transition-colors" />
       </a>
 
       {/* Navigation */}
@@ -650,7 +650,7 @@ const App: React.FC = () => {
 
                <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl hover:border-white/30 transition-colors">
                   <div className="w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
-                     <WhatsAppIcon className="w-6 h-6 text-gold-500" />
+                     <WhatsAppIcon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Chat on WhatsApp</h3>
                   <p className="text-slate-400 text-sm mb-6">Have a quick question? Direct message our team.</p>

@@ -15,6 +15,7 @@
                 900: '#0f172a',
                 950: '#020617',
               },
+              // Remapped 'gold' to the requested Red/Orange brand color (#EF4444)
               gold: {
                 400: '#F87171',
                 500: '#EF4444',
@@ -47,7 +48,7 @@
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #DC2626; 
+        background: #EF4444; 
       }
       .text-gradient {
         background-clip: text;
@@ -60,14 +61,16 @@
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
